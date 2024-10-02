@@ -1,11 +1,11 @@
-const express = require('express');
-const axios = require('axios');
+const express = require('express'); 
+const axios = require('axios'); // Используйте require вместо import
 const app = express();
 app.use(express.json());
 
 // Вставьте ваши токены здесь
-const TELEGRAM_BOT_TOKEN = 'ВАШ_ТЕЛЕГРАМ_БОТ_ТОКЕН'; // Вставьте сюда ваш токен от Telegram бота
-const VIBER_BOT_TOKEN = 'ВАШ_ВАЙБЕР_БОТ_ТОКЕН'; // Вставьте сюда ваш токен от Viber бота
+const TELEGRAM_BOT_TOKEN = '7659791269:AAErdvPFlG-Wwk-FUcF5PZ_IszIEJ0Wj5Tk'; // Ваш токен от Telegram бота
+const VIBER_BOT_TOKEN = 'ВАШ_ВАЙБЕР_БОТ_ТОКЕН'; // Ваш токен от Viber бота
 
 // Маршрут для отправки сообщения в Telegram
 app.post('/sendTelegram', async (req, res) => {
@@ -54,7 +54,7 @@ app.post('/sendViber', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
     console.log(`Сервер работает на порту ${PORT}`);
 });
